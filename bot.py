@@ -248,7 +248,7 @@ async def confirm_transaction(update: Update, context: ContextTypes.DEFAULT_TYPE
         }}
     )
     
-    await query.message.reply_text(f"{action.capitalize()} of ${amount}, utilizing {selected_payment_method['type']} was successful! Current Balance: ${new_balance}")
+    await query.message.reply_text(f"{action.capitalize()} of ${amount}, utilizing {selected_payment_method} was successful! Current Balance: ${new_balance}")
 
     await query.answer()
 
