@@ -57,6 +57,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if not user:
 
             users_collection.insert_one({"user_id": user_id, "balance": 0, "last_transaction": None})
+            user = users_collection.find_one({"user_id": user_id})
 
         if query.data == "check_balance":
 
