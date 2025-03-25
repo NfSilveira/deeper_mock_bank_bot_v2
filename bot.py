@@ -232,6 +232,10 @@ async def confirm_transaction(update: Update, context: ContextTypes.DEFAULT_TYPE
     amount = context.user_data.get("amount")
     selected_payment_method = context.user_data.get("selected_payment_method")
 
+    if isinstance(selected_payment_method, dict):
+
+        selected_payment_method = selected_payment_method['type']
+
 
     user = users_collection.find_one({"user_id": user_id})
     new_balance = user["balance"] + amount if action == "deposit" else user["balance"] - amount
