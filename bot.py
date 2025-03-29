@@ -28,7 +28,7 @@ users_collection = db["users"]
 
 
 ## Setting up Logging for Debugging
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
+# logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 
 
 async def start_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
